@@ -1,0 +1,114 @@
+div.product-thumb{text-align:center;}
+#yith-wacp-popup {width:100%;height:auto;}
+#yith-wacp-popup .yith-wacp-content {
+    padding: 0 5px !important;
+    padding-right: 15px;
+    margin: 0px !important;
+	font-family: myfont;
+    font-size: 14px;
+}
+#yith-wacp-popup .yith-wacp-message {
+    color: #000000;
+    background-color: #e6ffc5;
+}
+.yith-wacp-content .yith-wacp-message {
+    margin-bottom: 5px !important;
+    padding: 5px 5px 5px 25px !important;
+	font-size:14px;
+	background: url(../images/message-icon.png) no-repeat 5px center;
+}
+
+.yith-wacp-content .yith-wacp-message span {
+    display: block;
+    overflow: hidden;
+    line-height: 30px;
+}
+.yith-wacp-content .yith-wacp-message:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.yith-wacp-content .product-thumb img {
+    max-width: 100%;
+    height: auto;
+}
+.yith-wacp-content .info-box {
+    overflow: hidden;
+    background: none;
+    border: none;
+}
+.yith-wacp-content .product-info {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.yith-wacp-content .product-info .product-title {
+    line-height: 1.5;
+    font-size: 15px !important;
+}
+.yith-wacp-content .product-info .product-title a{    color: #3c3b48;text-transform:uppercase;}
+div.product-price{color: #d55252;font-size:20px;text-align: left;    font-weight: bold;}
+.yith-wacp-content .cart-info {
+    padding: 5px 0 !important;
+	border-bottom: 1px solid #e0e0e0;
+}
+.yith-wacp-content .cart-info > div {
+    color: #565656;
+}
+.yith-wacp-content .cart-info > div {
+    font-size: 15px;
+    text-transform: uppercase;
+    clear: both;
+    font-weight: 700;
+}
+.yith-wacp-content .cart-info > div > span {
+    float: right;
+	color: #000000;
+}
+
+.yith-wacp-content .popup-actions {
+    margin-top: 5px!important;
+    padding-bottom: 5px !important;
+	text-align:center;
+}
+.yith-wacp-content .popup-actions .button {
+    min-width: 30%;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 0;
+    line-height: normal;
+}
+
+.yith-wacp-content .popup-actions .button {
+    min-width: 30%;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 0;
+    line-height: normal;
+	text-align:center;
+	font-family:myfont;
+	font-weight:700;
+}
+
+.yith-wacp-content .popup-actions a {
+    padding: 10px;
+    font-size: 13px !important;
+    background-color: #E94344 ;
+    opacity: 0.7;
+    color: #ffffff !important;
+    border: none !important;
+}
+.yith-wacp-content .popup-actions a:hover{background: #ff0000;}
+.yith-wacp-content .product-orther > h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+	font-family:myFont;
+}
+.yith-wacp-content div.sp_gia,.yith-wacp-content div.sp_gia .gia {text-align:center;}
+.yith-wacp-content div.sp_gia .giakm,.yith-wacp-content div.sp_gia .motgia,.yith-wacp-content div.sp_gia .motgia a {font-size:13px;}

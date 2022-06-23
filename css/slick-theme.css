@@ -1,0 +1,248 @@
+@charset 'UTF-8';
+.slick-initialized *
+{
+    outline:none;
+}
+.slick-loading .slick-list
+{
+    background: #fff url('images/ajax-loader.gif') center center no-repeat;
+}
+.slick-arrow{
+    opacity: 0.6;
+    transition:0.5s;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: calc(50% - 26px);
+    display: block;
+    width: 18px;
+    height: 52px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index:10;
+}
+.slick-arrow:hover{
+    opacity: 1;
+    transition:0.5s;
+    outline: 0;
+}
+.slick-prev
+{
+    left: 0;
+    background-repeat: no-repeat;
+}
+.slick-next
+{
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.slick:hover .slick-prev,.slick:hover .slick-next
+{
+    opacity:1;
+    transition:0.5s;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.button.slick-arrow:focus{outline: 0;}
+
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+} 
+.slick-prev:before
+{
+    content: '';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '';
+}
+
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '';
+}
+/* Dots */
+.slick-dots
+{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 4px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 25px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    content: 'â€¢';
+    text-align: center;
+    border-radius: 50%;
+    background: #ccc;
+    border:1px solid #ccc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before
+{
+    background: #555;
+    border-color: #555;
+}
+.myarrow{
+    height: 60px;
+    width: 60px;
+}
+.myarrow::after,.myarrow::before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform-origin:100% 50%;
+    border-radius:5px;
+}
+.myarrow::before{
+    transform: rotate(-45deg);
+    margin: -2px 0 0;
+}
+.myarrow::after{
+    transform: rotate(45deg);
+}
+.myarrow:hover::after,.myarrow:hover::before{
+    opacity: 1;
+}
+.myarrow.prev{
+    left: 50px;
+    transform: rotate(180deg);
+}
+.myarrow.next{
+    right: 50px;
+}
+.myarrow.next::after,.myarrow.next::before{
+    top: calc(50% - 2px);
+}
+.slick_chuan .myarrow1{
+    top:50% !important;
+}
+.myarrow1{
+    top: 35%;
+    transform: translateY(-50%);
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.6) !important;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.myarrow1.prev{left: 0px;}
+.myarrow1.next{right: 0px;}
+.myarrow1 i.fa{
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+#sl_hinhthem .myarrow1{
+    top:50% !important;
+    width: 24px;
+    height: 24px;
+}
+#sl_hinhthem .myarrow1.prev{left: -8px;}
+#sl_hinhthem .myarrow1.next{right: -10px;}
+.arrow_hover .slick-arrow{opacity: 0 !important;}
+.arrow_hover:hover .slick-arrow{opacity: 1 !important;}
+@media only screen and (max-width: 600px) {
+    .myarrow::after,.myarrow::before{
+        width: 20px;
+        height: 2px;
+    }
+    .myarrow.next{right: 10px;}
+    .myarrow.prev{left: 10px;}
+}

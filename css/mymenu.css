@@ -1,0 +1,617 @@
+
+.menu_overlay.h-100{height: 0%;top:0!important;overflow-y:auto;}
+.no-border{border-top: none !important;}
+.header a {
+    top: calc(50% - 19px);
+    left:5px;
+    background: transparent !important;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    z-index: 80;
+    line-height: 40px;
+    display: none;
+}
+
+.header a:hover {
+    color: #fff
+}
+.header a:after {
+    content: 'Menu';
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    font-size: 11px;
+    color: #222;
+}
+.header a span {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 28px;
+    height: 2px;
+    background: #222;
+}
+.header a span.s1 {
+    top: 5px;
+}
+.header a span.s2 {
+    top: 12px;
+}
+.header a span.s3 {
+    top: 19px;
+}
+.active i.fa-bars:before{content: "\f00d";}
+.header a.active span.s2 {display: none}
+#search_mobi .last{
+    margin-bottom: 60px;
+}
+.menu_overlay{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 0%;
+    width: 100%;
+    z-index: 99999999999;
+    background-color: rgba(255,255,255,1);
+    color: #f1f1f1;
+    overflow:hidden;
+    transition: 0.1s;
+}
+.menu_overlay.w-100{width: 100%;}
+a.close_menu_btn{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    color: #f1f1f1;
+    z-index: 99999999999;
+    display: none;
+}
+#search_mobi{
+    position: relative;
+    padding: 15px 30px 0;
+    border-top: none !important;
+}
+#search_mobi input{
+    width: 100%;
+    border-radius: 26px;
+    background-color: rgba(255,255,255,0.4);
+    color: #666;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 4px 15px;
+}
+#search_mobi i{
+    position: absolute;
+    top: 22px;
+    right: 40px;
+    color: #666;
+}
+.menu_overlay ul{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    z-index: 8888;
+}
+.menu_overlay>ul{
+    top:0px;
+    bottom: 0px;
+    overflow-y: scroll;
+    padding: 10px 30px 60px;
+}
+.menu_overlay li a{ 
+    color: #666;
+    display: block;
+    padding: 12px 0px;
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 100%;
+}
+.menu_overlay ul li{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    position: relative;
+}
+.menu_overlay ul li i.fa{
+    position: absolute;
+    width: 20%;
+    right: 0px;
+    top:0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    height: 100%;
+    text-align: right;
+    font-size: 18px;
+    line-height: 18px;
+    color: #666;
+}
+.menu_overlay ul li.active2>i.fa:before{
+        content: "\f107";
+}
+.menu_overlay ul li ul{display: none;}
+.menu_overlay ul li.active2>ul{
+    display: block;
+}
+.menu_overlay ul li ul li a{
+    padding-left: 15px;
+}
+.menu_overlay ul li ul li ul li a{
+    padding-left: 30px;
+}
+.menu_overlay ul li ul li ul li ul li a{
+    padding-left: 45px;
+}
+    /*----menufooter------*/
+#menufooter{
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999999999;
+    background-color: rgba(255,255,255,0.95);
+    display: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+ }
+#menufooter ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+#menufooter ul li{width: 20%;text-align: center;padding: 4px 0px;}
+#menufooter ul li span{
+    display:block; 
+    font-size: 12px;
+    line-height: 16px;
+}
+#menufooter ul li i{
+    display:block; 
+    font-size: 20px;
+    line-height: 20px;
+}
+#menufooter ul li a{color: #666;display: block;}
+.text-do{color: #e7013a !important;}
+#menufooter ul li a:hover{color: #d33;}
+#menufooter ul li a:active{color: #d33;}
+#menufooter ul li img{vertical-align: top;width: 20px;height: 20px;}
+.blink_me{
+    
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    animation-name: blinker;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+/*----end menufooter------*/
+/*---box add--*/
+.box-add{
+position: fixed;
+right: 15px;
+top: 50%;
+transform: translateY(-50%);
+z-index: 99;
+}
+.box-add-item{
+    position: relative;
+    overflow: unset !important;
+}
+.box-add-item a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.box-note{
+    position: absolute;
+    left:-165px;
+    top:6px;
+    width: 150px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    display: none;
+}
+.box-note:after{
+    content:'';
+    position:absolute;
+    right:-7px;
+    top:10px;
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+    border-left:7px solid rgba(0,0,0,0.5);
+}
+.box-add-item:hover .box-note{
+    display: block;
+}
+.box-add-item i.fa{
+font-size: 22px;
+line-height: 44px;
+color: #fff;
+}
+.box-add-item.box-map{background-color: #00b8d4;}
+.box-add-item.box-message{background-color:#f7a400;}
+.box-add-item.box-call{background-color:#7d51a0;}
+/*---chat facebook*/
+.box-facebook svg{
+    width: 28px;
+}
+.js-facebook-messenger-container.closed,
+.js-facebook-messenger-tooltip.closed {
+    display: none!important
+}
+
+div.js-facebook-messenger-box,
+.js-facebook-messenger-button,
+.js-facebook-messenger-tooltip {
+    z-index: 999
+}
+
+.js-facebook-messenger-tooltip {
+    display: none;
+    position: fixed;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1.0E+30
+}
+
+.js-facebook-messenger-close-tooltip {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px
+}
+
+div.js-facebook-messenger-box.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand
+}
+
+div.js-facebook-messenger-box.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+div.js-facebook-messenger-box {
+    background: #1182fc
+}
+
+div.js-facebook-messenger-box,.box-add-item{
+    width: 44px;
+    height: 44px;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 44px;
+    background: #1182FC;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+div.js-facebook-messenger-box.rotate svg#fb-msng-icon {
+    transform: rotate(0deg)
+}
+
+div.js-facebook-messenger-box svg#fb-msng-icon {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    opacity: 1;
+    overflow: hidden;
+    -webkit-transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+    -moz-transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+    -o-transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+    transition: opacity 160ms ease-in-out, transform 160ms ease-in-out
+}
+
+div.js-facebook-messenger-box.rotate svg#close-icon {
+    transform: rotate(-45deg)
+}
+
+div.js-facebook-messenger-box svg#close-icon {
+    opacity: 0;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    -webkit-transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+    -moz-transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+    -o-transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+    transition: opacity 160ms ease-in-out, transform 160ms ease-in-out
+}
+
+.js-facebook-messenger-container {
+    transform: translateY(50px);
+    bottom: 150px;
+    right: 70px
+}
+
+.js-facebook-messenger-container,
+.js-facebook-messenger-container-button {
+    z-index: 1000
+}
+
+.js-facebook-messenger-container {
+    position: fixed;
+    display: none;
+    border-radius: 10px;
+    pointer-events: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06), 0 2px 32px rgba(0, 0, 0, 0.16);
+    -webkit-transition: transform 160ms ease-in-out, opacity 160ms ease-in-out;
+    -moz-transition: transform 160ms ease-in-out, opacity 160ms ease-in-out;
+    -o-transition: transform 160ms ease-in-out, opacity 160ms ease-in-out;
+    transition: transform 160ms ease-in-out, opacity 160ms ease-in-out
+}
+
+.js-facebook-messenger-top-header {
+    width: 100%;
+}
+
+.js-facebook-messenger-top-header {
+    color: #fff;
+    background: #1182fc
+}
+
+.js-facebook-messenger-top-header {
+    display: block;
+    position: relative;
+    width: 300px;
+    background: #1182FC;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    padding: 10px;
+    font-size: 14px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.js-facebook-messenger-container iframe,
+.js-facebook-messenger-container-button iframe {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+
+.js-facebook-messenger-tooltip {
+    color: #404040;
+    background: #fff
+}
+
+
+.js-facebook-messenger-container.open {
+    transform: translateY(0px);
+    display: block;
+    pointer-events: all;
+    background-color: #1182FC;
+}
+
+.js-facebook-messenger-tooltip {
+    bottom: 97px;
+    right: 97px
+}
+
+div.js-facebook-messenger-box.open svg#fb-msng-icon {
+    opacity: 0
+}
+
+div.js-facebook-messenger-box.rotate.open svg#close-icon {
+    transform: rotate(0deg)
+}
+
+div.js-facebook-messenger-box.open svg#close-icon {
+    opacity: 1
+}
+/*--end chat facebook---*/
+/*cac modal*/
+.close{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 25px;
+    line-height:25px;
+    color:#000 !important;
+    z-index:90;
+}
+.modal .h6{
+    margin-bottom:15px;
+    font-size:18px;
+    line-height:30px;
+    text-align:center;
+}
+#modal_call h6{
+    font-size: 14px;
+    line-height: 20px;
+}
+.modal h6 b{
+    text-transform:uppercase;
+}
+.modal .form-control{
+    margin: 0 auto 15px;
+    height:40px;
+    font-size: 14px;
+    line-height: 18px;
+}
+.modal .form-control.btn{
+    margin-bottom: 0;
+}
+.modal textarea.form-control{height: 80px;resize: none;}
+#modal_message .modal-dialog,#modal_message .modal-content{
+    max-width: 400px;
+    margin-top: 10%;
+}
+#modal_call .modal-dialog,#modal_call .modal-content{
+    max-width: 480px;
+    margin-top: 10%;
+}
+
+#modal_map .modal-dialog,#modal_map .modal-content{
+    min-width: 880px;
+}
+#modal_result .modal-dialog,#modal_result .modal-content{
+    max-width: 420px;
+    margin-top: 10%;
+}
+#modal_call .modal-content{padding:20px;}
+#modal_call .form-group{
+    position:relative;
+    padding-top:10px;
+}
+#modal_call input[type='text']{
+    height:50px;
+}
+#modal_call .btn{
+    position:absolute;
+    top:15px;
+    right:5px;
+    width:150px;
+}
+#modal_call .phan_cach{
+    position:relative;
+    margin-bottom:10px; 
+    text-align:center;
+}
+#modal_call .phan_cach span{
+    color:#ccc;
+    font-size:12px;
+    line-height:15px;
+    padding:4px 10px;
+    background-color:#fff;
+    z-index:30;
+    position:relative;
+}
+#modal_call .phan_cach:after{
+    content:'';
+    position:absolute;
+    z-index:10;
+    left:0;
+    bottom: 2px;
+    width:100%;
+    height:1px;
+    background:#e0e0e0;
+}
+#modal_call p{
+    text-align:center;
+    font-size:14px;
+    line-height:20px;
+}
+#modal_call p+p{
+    font-size:25px;
+    line-height:30px;
+    margin-top:8px;
+}
+#modal_map p{
+    font-size:14px;
+    line-height:20px;
+    margin:10px 0 20px;
+    font-weight:400;
+}
+#modal_result{
+    text-align:center;
+    padding
+}
+#modal_result p{
+    margin:10px 0;
+}
+#modal_result h6{
+    text-transform:uppercase;
+    font-size:18px;
+    font-weight:700;
+}
+#modal_result p i.fa{
+    color:#fff;
+    background:#0e9d58;
+    padding:8px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+#modal_result .auto-close{
+    color:#aaa;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+#modal_result .auto-close b{color:#000;}
+/*end modal*/
+@media screen and (max-width: 992px) {
+    .header a {display: block;}
+    .menu_overlay.h-100{height: 100% !important;}
+    .js-facebook-messenger-container {
+          bottom: 80px !important;
+          right: 10px !important;
+      }
+    .box-add{display: none !important;}
+    #menufooter{display: block;}
+    #modal_map .modal-dialog,#modal_map .modal-content{
+        min-width: 320px;
+    }
+    .caption_menu {
+        margin-top: 20px;
+        color: #888;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 300px) {
+    #menufooter ul li span{
+        font-size: 10px;
+    }
+}

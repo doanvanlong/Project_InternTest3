@@ -1,0 +1,4 @@
+[20-Mar-2019 11:08:32 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: ckfinder_baseUrl in /home/vinhkhanhhungcom/public_html/admin/ckfinder/config.php on line 64
+[20-Mar-2019 11:08:33 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: isLoggedIn in /home/vinhkhanhhungcom/public_html/admin/ckfinder/config.php on line 34
+[20-Mar-2019 11:09:05 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: ckfinder_baseUrl in /home/vinhkhanhhungcom/public_html/admin/ckfinder/config.php on line 64
+[20-Mar-2019 11:09:05 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: isLoggedIn in /home/vinhkhanhhungcom/public_html/admin/ckfinder/config.php on line 34

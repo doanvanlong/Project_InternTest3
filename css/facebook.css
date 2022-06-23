@@ -1,0 +1,73 @@
+.fbMess, .fbMess > .btn
+{
+	 transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+.fbMess {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #fff;
+    border: solid 1px #3b5998;
+    border-bottom: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+	
+}
+.fbMess.show {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.fbMess.loaded {
+    opacity: 1;
+    visibility: visible;
+}
+.fbMess > .btn {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    margin: 0 0 1px -37px;
+    white-space: nowrap;
+    color: #fff;
+    background: #3b5998;
+    font-weight: 400;
+    padding: 0 10px 0 8px;
+    font-size: 15px;
+    line-height: 35px;
+    cursor: pointer;
+	border-radius:0;
+}
+.fbMess > .btn .fa {
+    color: inherit;
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -5px 5px 0 0;
+}
+.fbMess > .btn:hover {
+    left: auto;
+    right: 0;
+    margin: 0 -1px 1px 0;
+}
+.fbMess.show .btn {
+    text-indent: -1000000px;
+    padding: 0;
+    width: 25px;
+    line-height: 25px;
+    left: auto;
+    right: 0;
+    margin: 0 -1px 1px 0;
+    background: url(../images/close-pop.png) no-repeat center center #3b5998;
+}

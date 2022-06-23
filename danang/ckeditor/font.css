@@ -1,0 +1,5 @@
+@font-face {  
+    font-family: "tieude";  
+    src: url(../../font/Lobster-Regular.ttf); /* IE */  
+    src: local("realfontname"), url("../../font/Lobster-Regular.ttf") format("truetype"); /*non-IE*/  
+}

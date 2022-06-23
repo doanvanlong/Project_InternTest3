@@ -1,0 +1,87 @@
+RewriteEngine on
+Options -Indexes
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteRule ^sitemap.xml$ sitemap.php [L]
+DirectoryIndex intro.php
+
+#ErrorDocument 400 index.html
+#ErrorDocument 401 index.html
+#ErrorDocument 403 index.html 
+#ErrorDocument 404 /404.php
+#ErrorDocument 500 index.html
+#ErrorDocument 502 index.html
+#ErrorDocument 504 index.html
+
+RewriteRule ^thumb/([0-9]+)x([0-9]+)x([0-9]+)x([0-9]+)/(.*)$ timthumb.php?w=$1&h=$2&zc=$3&q=$4&src=http://%{HTTP_HOST}/$5  [L]
+
+RewriteRule ^danang/$ danang/index.php [L]
+
+#RewriteRule sitemap.xml$ sitemap.php
+
+
+RewriteRule ^([a-zA-Z0-9_-]+).html$ intro.php?com=$1  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&p=([0-9]+)$ intro.php?com=$1&p=$2  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ intro.php?com=$1&id=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html&p=([0-9]+)$ intro.php?com=$1&id=$2&p=$3  [L]
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ intro.php?com=$1&id_danhmuc=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&p=([0-9]+)$ intro.php?com=$1&id_danhmuc=$2&p=$3  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$ intro.php?com=$1&id_list=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/&p=([0-9]+)$ intro.php?com=$1&id_list=$2&p=$3  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).htm$ intro.php?com=$1&id_cat=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).htm&p=([0-9]+)$ intro.php?com=$1&id_cat=$2&p=$3  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+).html&keyword=(.*)$ intro.php?com=$1&keyword=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&keyword=(.*)&p=([0-9]+)$ intro.php?com=$1&keyword=$2&p=$3 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+).html&id_danhmuc=([0-9]+)&keyword=(.*)$ intro.php?com=$1&id_danhmuc=$2&keyword=$3  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&id_danhmuc=([0-9]+)&keyword=(.*)&p=([0-9]+)$ intro.php?com=$1&id_danhmuc=$2&keyword=$3&p=$4  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ intro.php?com=$1&act=$2 [L]
+
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/* text/html text/xml text/css text/plain text/x-component text/x-js text/richtext text/xsd text/xsl
+    AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml image/x-icon
+    AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+    AddOutputFilterByType DEFLATE font/truetype font/opentype
+    Header append Vary User-Agent env=!dont-vary
+    AddOutputFilter DEFLATE js css htm html xml text
+</ifModule>
+# 1 year
+<FilesMatch ".(ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch ".(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch ".(xml|txt|css|js)$">
+Header set Cache-Control "max-age=604800, proxy-revalidate"
+</FilesMatch>

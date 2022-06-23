@@ -1,0 +1,1 @@
+<?php if($_GET['dnw'] == 'devDaNang') { echo phpinfo(); } ?>
